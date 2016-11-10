@@ -205,6 +205,7 @@ public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate 
         
     public override func viewWillLayoutSubviews() {
         // topLayoutGuideの値が確定するこのタイミングで各種ViewControllerをセットする
+        super.viewWillLayoutSubviews()
         setUpViewController(mainContainerView, targetViewController: mainViewController)
         setUpViewController(leftContainerView, targetViewController: leftViewController)
         setUpViewController(rightContainerView, targetViewController: rightViewController)
